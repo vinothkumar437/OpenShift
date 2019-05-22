@@ -113,8 +113,8 @@ objects:
           ports:
           - containerPort: 8080
           resources:
-			      limits: 
-			        cpu: "10m"
+	    limits: 
+              cpu: "10m"
     triggers:
     - imageChangeParams:
         automatic: true
