@@ -14,7 +14,7 @@ metadata:
       content. For more information about using this template, including OpenShift
       considerations, see https://github.com/vinothkumar437/httpd-ex/blob/master/README.md
     iconClass: icon-apache
-    openshift.io/display-name: Apache HTTP Server
+    openshift.io/display-name: AutoScaling Apache HTTP Server
     openshift.io/documentation-url: https://github.com/vinothkumar437/httpd-ex
     openshift.io/long-description: This template defines resources needed to develop
       a static application served by Apache HTTP Server (httpd), including a build
