@@ -113,7 +113,7 @@ objects:
           ports:
           - containerPort: 8080
           resources:
-	    limits: 
+            limits: 
               cpu: "10m"
     triggers:
     - imageChangeParams:
@@ -184,4 +184,4 @@ parameters:
   displayName: Generic Webhook Secret
   from: "[a-zA-Z0-9]{40}"
   generate: expression
-   name: GENERIC_WEBHOOK_SECRET
+  name: GENERIC_WEBHOOK_SECRET
