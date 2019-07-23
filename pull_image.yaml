@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: <your-image-name>
+  name: <your-image-name>
+  namespace: <your-project>
+spec:
+  strategy:
+    customStrategy:
+      from:
+        kind: "DockerImage"
+        name: "<docker-private-your-url>"
+      imagePullSecrets:
+      - name: "<your-secret>"
