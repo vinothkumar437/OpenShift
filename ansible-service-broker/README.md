@@ -4,5 +4,7 @@ Once the cluster is running, we can install the OpenShift Ansible Broker onto th
 
 First, we will need a new project to run the broker in. Using the CLI, let’s create the ansible-service-broker project.
 
+**oc login -u system:admin**
 
+**oc new-project ansible-service-broker**
 
