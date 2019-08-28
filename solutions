@@ -1,3 +1,8 @@
 How to restrict access to OpenShift using LDAP groups filter
 
 https://access.redhat.com/solutions/3510401
+
+Logs contain error 'Failed to get system container stats for "/system.slice/atomic-openshift-node.service"'
+
+https://access.redhat.com/solutions/3825591
+
