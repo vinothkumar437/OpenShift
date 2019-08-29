@@ -1,0 +1,81 @@
+# Create an OSEv3 group that contains the ocp-masters, nodes, and etcd groups
+[OSEv3:children]
+masters
+nodes
+etcd
+nfs
+
+# Set variables common for all OSEv3 hosts
+[OSEv3:vars]
+# SSH user, this user should allow ssh based auth without requiring a password
+ansible_ssh_user=root
+debug_level=8
+openshift_deployment_type=openshift-enterprise
+openshift_master_cluster_method=native
+openshift_master_default_subdomain=cloudapps.example.com
+openshift_master_api_port=8443
+openshift_master_console_port=8443
+openshift_master_cluster_public_hostname=ocp-master.example.com
+openshift_master_cluster_hostname=ocp-master.example.com
+
+#network related
+osm_cluster_network_cidr=10.244.0.0/16
+openshift_portal_net=172.30.0.0/16
+etcd_image=192.168.1.202:5000/rhel7/etcd:3.2.22
+
+#docker registry related
+oreg_url=192.168.1.202:5000/openshift3/ose-${component}:${version}
+openshift_docker_insecure_registries=192.168.1.202:5000
+openshift_examples_modify_imagestreams=true
+openshift_image_tag=v3.11.135
+
+#web console related
+openshift_console_install=true
+openshift_console_hostname=console.cloudapps.example.com
+openshift_web_console_install=true
+openshift_web_console_prefix=192.168.1.202:5000/openshift3/ose-
+
+# default selectors for router and registry services
+openshift_router_selector='node-role.kubernetes.io/infra=true'
+openshift_registry_selector='node-role.kubernetes.io/infra=true'
+
+# uncomment the following to enable htpasswd authentication; defaults to DenyAllPasswordIdentityProvider
+openshift_ocp-master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider'}]
+openshift_disable_check=memory_availability,disk_availability,docker_image_availability
+
+
+#registry storage
+openshift_hosted_registry_storage_kind=nfs
+openshift_hosted_registry_storage_access_modes=['ReadWriteMany']
+openshift_hosted_registry_storage_host=hub.example.com
+openshift_hosted_registry_storage_nfs_directory=/data
+openshift_hosted_registry_storage_volume_name=registry
+openshift_hosted_registry_storage_volume_size=50Gi
+
+
+openshift_enable_unsupported_configurations=True
+openshift_cluster_monitoring_operator_install=false
+openshift_metrics_install_metrics=false
+openshift_logging_install_logging=false
+openshift_enable_service_catalog=false
+ansible_service_broker_install=false
+template_service_broker_install=false
+
+
+
+# host group for ocp-masters
+[masters]
+ocp-master.example.com
+
+[nfs]
+hub.example.com
+
+# host group for etcd
+[etcd]
+ocp-master.example.com
+
+
+# host group for nodes, includes region info
+[nodes]
+ocp-master.example.com openshift_node_group_name='node-config-master-infra'
+ocp-node01.example.com openshift_node_group_name='node-config-compute'
