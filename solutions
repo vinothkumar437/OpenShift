@@ -6,3 +6,6 @@ Logs contain error 'Failed to get system container stats for "/system.slice/atom
 
 https://access.redhat.com/solutions/3825591
 
+How to configure DNS to work with Openshift v3
+
+https://access.redhat.com/solutions/2097731
