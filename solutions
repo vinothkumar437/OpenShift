@@ -9,3 +9,8 @@ https://access.redhat.com/solutions/3825591
 How to configure DNS to work with Openshift v3
 
 https://access.redhat.com/solutions/2097731
+
+oc create clusterrolebinding registry-controller --clusterrole=cluster-admin --user=administrator
+
+htpasswd -b /etc/origin/master/htpasswd administrator redhat
+ 
