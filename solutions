@@ -13,4 +13,15 @@ https://access.redhat.com/solutions/2097731
 oc create clusterrolebinding registry-controller --clusterrole=cluster-admin --user=administrator
 
 htpasswd -b /etc/origin/master/htpasswd administrator redhat
+
+
+Pods evicted with error "The node was low on resource: ephemeral-storage"
+
+https://access.redhat.com/solutions/4367311
+
+https://docs.docker.com/config/containers/logging/configure/
+
+Pods evicted due lack of Ephemeral Storage
+
+https://access.redhat.com/solutions/4262861
  
