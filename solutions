@@ -62,3 +62,7 @@ spec:
     requests.memory: 4Gi
   scopes:
   - NotTerminating
+  
+ Message: SELinux boolean container_manage_cgroup does not exist
+ 
+ https://access.redhat.com/solutions/4161011
