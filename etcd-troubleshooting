@@ -1,0 +1,1 @@
+ETCDCTL_API=3 etcdctl snapshot restore /root/etcd-backup/member/snap/db --name host.example.com --initial-cluster host.example.com=https://x.x.x.x:2380 --initial-cluster-token etcd-cluster-1 --initial-advertise-peer-urls https://x.x.x.x:2380 --data-dir /var/lib/etcd/restore --skip-hash-check=true
