@@ -66,3 +66,8 @@ spec:
  Message: SELinux boolean container_manage_cgroup does not exist
  
  https://access.redhat.com/solutions/4161011
+
+How do I restore from an etcd backup in OpenShift?
+
+https://access.redhat.com/solutions/4013381
+
