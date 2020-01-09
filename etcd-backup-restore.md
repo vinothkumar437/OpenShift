@@ -6,4 +6,7 @@
   <pre>mkdir /home/user/etcdbackup/
 cd /home/user/etcdbackup/
 mv /etc/origin/node/pods/etcd.yaml .</pre>
+  <li>Check the ETCD Container is running or nor, if is exited state please delete</li>
+  <pre>[root@ocpmaster support]# docker ps -a | grep -i etcd
+[root@ocpmaster support]#</pre>
 </ol>
