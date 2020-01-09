@@ -4,6 +4,6 @@
 <ol>
   <li>Create a backup directory and move the etcd.yaml file</li>
   <pre>mkdir /home/user/etcdbackup/
-  cd /home/user/etcdbackup/
-  mv mv /etc/origin/node/pods/etcd.yaml . </pre>
+cd /home/user/etcdbackup/
+mv /etc/origin/node/pods/etcd.yaml . </pre>
 </ol>
