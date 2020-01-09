@@ -20,4 +20,11 @@ ETCDCTL_API=3 etcdctl snapshot restore /root/etcdbackup-backup/member/snap/db --
 2020-01-08 16:57:48.898195 I | mvcc: restore compact to 48520210
 2020-01-08 16:57:49.243363 I | etcdserver/membership: added member 95c90cc859b94ed0 [https://x.x.x.x:2380] to cluster 676239b0d9b745cc
 [root@ocpmaster etcdbackup]#</pre>
+<li>Copy the file from /var/lib/etcd/restore to /var/lib/etcd/</li>
+<pre>cd /var/lib/etcd
+mv restore/* .</pre>
+<p>Move th etcd.yaml</p>
+<pre>mv etcd.yaml /etc/origin/node/pods/</pre>
 </ol>
+
+<p>For more information:<a href="https://access.redhat.com/solutions/4013381">Click here</a></p>
