@@ -17,3 +17,10 @@ For Project credit
     openshift.io/node-selector: “region=secondary"
     openshift.io/description: ""
     openshift.io/display-name: ""</pre>
+    
+<blockquote>
+For Project 
+</blockquote>
+<pre>
+oc annotate ns <target-proj> openshift.io/node-selector='kubernetes.io/hostname=app1.ap.ex.io'
+</pre>
