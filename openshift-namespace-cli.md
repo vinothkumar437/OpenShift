@@ -22,11 +22,11 @@ For Project credit
 For Project 
 </blockquote>
 <pre>
-oc annotate ns <target-proj> openshift.io/node-selector='kubernetes.io/hostname=app1.ap.ex.io'
+oc annotate ns "target-proj" openshift.io/node-selector='kubernetes.io/hostname=app1.ap.ex.io'
 </pre>
 
 <blockquote>
 For SCC Range
 </blockquote>
-<pre>oc annotate ns <target-proj> openshift.io/sa.scc.uid-range='999/1001' --overwrite=true</pre>
+<pre>oc annotate ns "target-proj" openshift.io/sa.scc.uid-range='999/1001' --overwrite=true</pre>
 
