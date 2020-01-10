@@ -13,3 +13,7 @@ For Project credit
 <p>Sets the node selector for a specific project by editing the project namespace. As an example to edit namespace for a project named “new project”</p>
 <pre># oc edit namespace newproject</pre>
 <p>Find the annotations section and add a node selector annotation as under. This is a yaml file; so make sure that the indentation is right.</p>
+<pre>  annotations:
+    openshift.io/node-selector: “region=secondary"
+    openshift.io/description: ""
+    openshift.io/display-name: ""</pre>
