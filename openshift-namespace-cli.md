@@ -11,3 +11,4 @@ oc patch dc/<dcname> -p '{"spec":{"template":{"spec":{"nodeSelector":{"<label_na
 For Project credit
 </blockquote>
 <p>Sets the node selector for a specific project by editing the project namespace. As an example to edit namespace for a project named “new project”</p>
+<pre># oc edit namespace newproject</pre>
