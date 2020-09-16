@@ -86,3 +86,6 @@ Accessing Red Hat Quay (formerly Quay Enterprise) without a CoreOS login
 
 https://access.redhat.com/solutions/3533201
 
+NGINX pod fails to start in OpenShift 3
+
+https://access.redhat.com/solutions/3419001
