@@ -1,0 +1,7 @@
+openssl req -config openssl.cnf -newkey rsa:4096 -nodes -sha256 -keyout <name>.key -x509 -days 3650 -out <name>.crt
+
+openssl req -config openssl.cnf -key <name>.key -new -out <name>.csr
+
+openssl req -text -noout -verify -in <name>.csr
+
+openssl x509 -text -noout -in <name>.crt
