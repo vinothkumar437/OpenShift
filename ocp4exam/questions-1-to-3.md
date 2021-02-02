@@ -6,6 +6,9 @@
   sudo yum install httpd-tools </br>
   mkdir work</br>
   cd work</br></pre>
+  <p> Create an users_env file with given password</p>
+  <pre>cat users_env</pre>
+  
   <li>Tea</li>
   <li>Milk</li>
 </ol> 
