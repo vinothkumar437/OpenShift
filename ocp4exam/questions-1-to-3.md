@@ -42,6 +42,11 @@ spec:
     name: Admin Portal
     type: HTPasswd
 </pre>
+<pre>oc login -u armstrong -p ${armstrong}
+oc login -u jobs -p ${jobs}
+oc login -u eric -p ${eric}
+oc login -u jack -p ${jack}
+oc login -u wozniak -p ${wozniak}</pre>
   <li>Tea</li>
   <li>Milk</li>
 </ol> 
