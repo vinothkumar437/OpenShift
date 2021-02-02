@@ -7,12 +7,13 @@
   mkdir work</br>
   cd work</br></pre>
   <p> Create an users_env file with given password</p>
-  <pre>cat users_env
+  <pre>cat users_env</br>
 export armstrong=aaaaaa
 export jobs=bbbbbb
 export wozniak=ccccc
 export jack=ddddddd
-export eric=eeeeeee
+export eric=eeeeeee</br>
+source users_env
   </pre>
   
   <li>Tea</li>
