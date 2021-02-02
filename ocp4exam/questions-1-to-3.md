@@ -47,7 +47,7 @@ oc login -u jobs -p ${jobs}
 oc login -u eric -p ${eric}
 oc login -u jack -p ${jack}
 oc login -u wozniak -p ${wozniak}</pre>
-  <li>Create a 5 new projects and assign the roles to the respective user, armstrong is an admin for project1, jack & eric has view permission on project2, woznaik has edit permission on project1</li>
+  <li>Create a 5 new projects and assign the roles to the respective user, armstrong is an admin for project1, jack & eric has view permission on project2, woznaik has edit permission on project1.</li>
   <pre>oc new-project project1
 oc new-project project2
 oc new-project project3
@@ -57,5 +57,5 @@ oc new-project project5</pre>
 oc policy add-role-to-user view jack -n project2
 oc policy add-role-to-user view eric -n project2
 oc policy add-role-to-user edit wozniak -n project1</pre>
-  <li>Milk</li>
+  <li>Assign cluster permission to the users, Jobs would be a cluster-admin, wozniak would not be allowed cluster-admin powers, no user would be able to provsion projects, Jack would be allowed to provision a project.</li>
 </ol> 
