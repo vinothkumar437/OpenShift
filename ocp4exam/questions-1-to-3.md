@@ -23,7 +23,7 @@ source users_env
   htpasswd -B -b passwd eric ${eric}
   </pre>
   <p>Create a secret</p>
-  <pre>oc create secret generic ex280-htpass --from-file=/xxx/yyy/passwd -n openshift-config</pre>
+  <pre>oc create secret generic ex280-htpass --from-file=htpasswd=/xxxx/yyyy/passwd -n openshift-config</pre>
   <pre> oc get oauth -o yaml
 apiVersion: config.openshift.io/v1
 kind: OAuth
