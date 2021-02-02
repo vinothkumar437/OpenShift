@@ -12,4 +12,7 @@ oc adm groups new pilot</pre>
   <pre>oc adm groups add-users  pilot eric</pre>
   <pre>oc adm policy add-role-to-group edit commander -n project3</pre>
   <pre>oc adm policy add-role-to-group view pilot -n project1</pre>
+  <li>Create a resource quota with name ex280-quota on the project1 with resource consumption to be PODS=3, SERVICE=6, MEMORY=1Gi, CPU= 2 Core.</li>
+  <pre>oc create quota ex280-quota --hard=cpu=2,memory=1G,pods=3,services=6 -n project1</pre>
+  <pre>oc describe quota ex280-quota -n project1</pre>
 </ol>
