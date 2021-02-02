@@ -59,14 +59,9 @@ oc policy add-role-to-user view eric -n project2
 oc policy add-role-to-user edit wozniak -n project1</pre>
   <li>Assign cluster permission to the users, Jobs would be a cluster-admin, wozniak would not be allowed cluster-admin powers, no user would be able to provsion projects, Jack would be allowed to provision a project.</li>
   <pre>oc adm policy add-cluster-role-to-user cluster-admin jobs
-
 oc describe clusterrolebindings self-provisioners
-
 oc get clusterrolebinding.rbac self-provisioners -o yaml > self-provisioners.yaml
-
 oc edit clusterrolebinding.rbac self-provisioners -o yaml
-
 oc describe clusterrolebinding.rbac self-provisioners
-
 oc adm policy add-cluster-role-to-user self-provisioner jack</pre>
 </ol> 
