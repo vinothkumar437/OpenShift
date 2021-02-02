@@ -22,7 +22,8 @@ source users_env
   htpasswd -B -b passwd jack ${jack}
   htpasswd -B -b passwd eric ${eric}
   </pre>
-  
+  <p>Create a secret</p>
+  <pre>oc create secret generic ex280-htpass --from-file=/xxx/yyy/passwd -n openshift-config</pre>
   <li>Tea</li>
   <li>Milk</li>
 </ol> 
