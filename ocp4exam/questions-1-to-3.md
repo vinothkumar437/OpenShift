@@ -15,6 +15,13 @@ export jack=ddddddd
 export eric=eeeeeee</br>
 source users_env
   </pre>
+  <pre>
+  htpasswd -c -B -b passwd armstrong ${armstrong}
+  htpasswd -B -b passwd jobs ${jobs}
+  htpasswd -B -b passwd wozniak ${wozniak}
+  htpasswd -B -b passwd jack ${jack}
+  htpasswd -B -b passwd eric ${eric}
+  </pre>
   
   <li>Tea</li>
   <li>Milk</li>
