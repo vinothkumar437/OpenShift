@@ -24,6 +24,27 @@ source users_env
   </pre>
   <p>Create a secret</p>
   <pre>oc create secret generic ex280-htpass --from-file=/xxx/yyy/passwd -n openshift-config</pre>
+  <pre> oc get oauth -o yaml
+  apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  annotations:
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2021-01-01T02:16:11Z"
+  generation: 3
+  name: cluster
+  resourceVersion: "2171927"
+  selfLink: /apis/config.openshift.io/v1/oauths/cluster
+  uid: 48c88463-e2cb-4ca2-a40d-1cd88d65ecde
+spec:
+  identityProviders:
+  - htpasswd:
+      fileData:
+        name: ex280-htpass
+    mappingMethod: claim
+    name: Admin Portal
+    type: HTPasswd
+</pre>
   <li>Tea</li>
   <li>Milk</li>
 </ol> 
