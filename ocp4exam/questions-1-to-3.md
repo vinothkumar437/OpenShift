@@ -47,6 +47,6 @@ oc login -u jobs -p ${jobs}
 oc login -u eric -p ${eric}
 oc login -u jack -p ${jack}
 oc login -u wozniak -p ${wozniak}</pre>
-  <li>Tea</li>
+  <li>Create a 5 new projects and assign the roles to the respective user, armstrong is an admin for project1, jack & eric has view permission on project2, woznaik has edit permission on project1</li>
   <li>Milk</li>
 </ol> 
