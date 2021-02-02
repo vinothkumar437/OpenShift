@@ -8,7 +8,7 @@
   cd work</br></pre>
   <p> Create an users_env file with given password</p>
   <pre>cat users_env
- export armstrong=aaaaaa
+export armstrong=aaaaaa
 export jobs=bbbbbb
 export wozniak=ccccc
 export jack=ddddddd
