@@ -62,6 +62,8 @@ oc policy add-role-to-user edit wozniak -n project1</pre>
 
 oc describe clusterrolebindings self-provisioners
 
+oc get clusterrolebinding.rbac self-provisioners -o yaml > self-provisioners.yaml
+
 oc edit clusterrolebinding.rbac self-provisioners -o yaml
 
 oc describe clusterrolebinding.rbac self-provisioners
