@@ -6,7 +6,7 @@
     <p> commander group should be allowed to edit project3.</p>
     <p> Pilot group should be allowed to view project1.</p></li>
   <pre>oc adm groups new commander
-   oc adm groups new pilot</pre>
+ oc adm groups new pilot</pre>
   <pre>oc adm groups add-users commander armstrong</pre>
   <pre>oc adm groups add-users  pilot jack</pre>
   <pre>oc adm groups add-users  pilot eric</pre>
