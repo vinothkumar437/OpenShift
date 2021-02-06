@@ -39,7 +39,8 @@ spec:
     max:
       cpu: 100m
       memory: 500Mi
-      
+      </pre>
+   <pre>   
       oc create -f limitrange.yaml
 </pre>
 </ol>
