@@ -16,4 +16,28 @@ oc adm groups new pilot</pre>
   <pre>oc create quota ex280-quota --hard=cpu=2,memory=1G,pods=3,services=6 -n project1</pre>
   <pre>oc describe quota ex280-quota -n project1</pre>
   <li>Create a LimitRange on Project4 with the limit sets to be for a POD & CONTAINER CPU 10m to 100m and MEMORY 5Mi to 500MIi</li>
+  <pre>vim limitrange.yaml
+  ---
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: dev-limits
+  namespace: project4
+spec:
+  limits:
+  - type: Pod
+    min:
+      cpu: 10m
+      memory: 5Mi
+    max:
+      cpu: 100m
+      memory: 500Mi
+  - type: Container
+    min:
+      cpu: 10m
+      memory: 5Mi
+    max:
+      cpu: 100m
+      memory: 500Mi
+</pre>
 </ol>
