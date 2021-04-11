@@ -5,3 +5,7 @@ openssl req -config openssl.cnf -key <name>.key -new -out <name>.csr
 openssl req -text -noout -verify -in <name>.csr
 
 openssl x509 -text -noout -in <name>.crt
+
+Verify
+===================
+openssl x509 -req -in <name>.csr -signkey <name>.key -out <name>.crt
