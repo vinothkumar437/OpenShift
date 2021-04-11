@@ -9,3 +9,13 @@ openssl x509 -text -noout -in <name>.crt
 Verify
 ===================
 openssl x509 -req -in <name>.csr -signkey <name>.key -out <name>.crt
+
+=====================================================
+=====================================================
+  990  rm -rf *
+  991  openssl genrsa -out app.key 2048
+  992  openssl req -new -key app.key -out app.csr
+  993  openssl x509 -req -days 365 -in app.csr -signkey app.key -out app.crt
+  994  openssl x509 -text -noout -in app.crt
+  995  openssl req -text -noout -verify -in app.csr
+
